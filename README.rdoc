@@ -1,0 +1,58 @@
+= Git Revision Download
+
+Redmine GitRevision Download is a Redmine plugin that adds a <b>download</b> link to
+the git repository browser, allowing users to download that snapshot.
+
+==Author
+
+* Emmanuel Bretelle aka chantra <chantra_-_AT_-_debuntu_-_DOT_-_org>
+
+==Changelog
+
+For the complete changelog see the <tt>CHANGELOG</tt>-file in the Redmine GitRevision Download
+
+==Latest stable release
+
+The currently available, latest stable release of the plugin is version <b>0.0.1</b>.
+
+==Compatibility
+
+This plugin is compatible with Redmine 0.9.x as well as with the current Redmine trunk.
+
+==Requirement
+
+This plugin depends on ruby gem <b>grit</b>
+You can install it with:
+<tt>gem install grit</tt>
+
+==Obtaining 
+
+<i>URL of the GitHub repository: http://github.com/chantra//tree/master</i>
+
+The source of this plugin can be "cloned" from the GitHub-repo using:
+
+<tt>$ cd {RAILS_ROOT}/vendor/plugins && git clone git://github.com/chantra/redmine_gitrevision_download.git</tt>
+
+==Installation
+
+- Download the plugin from the available source http://github.com/chantra/redmine_gitrevision_download/downloads
+- Install the plugin as described at: http://www.redmine.org/wiki/redmine/Plugins (<b>this plugin does require a plugin database migration</b>)
+- Restart Redmine
+
+==Uninstalling
+
+- Remove the directory <i>"redmine_gitrevision_download"</i> from the plugin-directory <i>"../vendor/plugins"</i>
+- Restart Redmine
+
+==Licensing
+
+This plugin is open-source and licensed under the "GNU General Public License v2" (GPL, http://www.gnu.org/licenses/old-licenses/gpl-2.0.html). See the included <tt>GPL.txt</tt> and <tt>LICENSE.txt</tt> files for details.
+
+* (C)2009, Emmanuel Bretelle aka chantra
+
+==Support
+
+If you would like to report a bug or request a new feature you can open a new issue at the issue-tracking section of the plugins: http://redmine.debuntu.org/projects/gitrevision-download/issues/new.
+
+As an alternative you can also join the <tt>#redmine</tt> channel on the "freenode IRC network" (http://freenode.net/irc_servers.shtml) to see if there is anyone who can provide some support.
+
