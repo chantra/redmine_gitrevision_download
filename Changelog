@@ -1,4 +1,8 @@
 0.0.2 (2010-06-12):
-  -
+Not long since the first realease...
+	* using redmine hokks instead of overriding templates
+	* adds permission
+	* activable as a module per project
+
 0.0.1 (2010-06-12):
-  - Initial public release
+	* Initial public release
