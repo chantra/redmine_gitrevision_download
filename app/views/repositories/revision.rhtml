@@ -1,8 +1,6 @@
+<%= call_hook(:view_repositories_show_contextual, { :repository => @repository, :project => @project }) %>
+
 <div class="contextual">
-  <% if @project.repository.type == "Git" %>
- <%= link_to l(:gitrevision_download), {:controller => 'gitrevision_download', :project_id => @project.id, :rev => @rev}, { :class => "icon icon-save", :rel => 'nofollow', :title => l(:gitrevision_download) } %>
-  |
-<% end %>
   &#171;
   <% unless @changeset.previous.nil? -%>
     <%= link_to_revision(@changeset.previous.revision, @project, :text => l(:label_previous)) %>

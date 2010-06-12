@@ -1,0 +1,5 @@
+<% if @project.module_enabled?('gitrevision_download') and @repository.type == "Git" %>
+ <%= link_to "#{l(:gitrevision_download_revdownload)} #{@rev}", 
+              {:controller => 'gitrevision_download', :project_id => @project.id, :rev => @rev},
+              { :class => "icon icon-save", :rel => 'nofollow', :title => "#{l(:gitrevision_download_revdownload)} #{@rev}" } %>
+<% end %>

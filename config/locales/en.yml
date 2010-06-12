@@ -7,4 +7,5 @@ en:
   repo_invalid: "The repository is not a value Git repository"
   repo_not_git: "The repository of project {{name}} is not a git repository"
   not_such_commit: "Not such commit {{commit}}."
-  gitrevision_download: "Download"
+  gitrevision_download_revdownload: "Download revision"
+  permission_view_gitrevision_download: "Download Git Revision Archive"

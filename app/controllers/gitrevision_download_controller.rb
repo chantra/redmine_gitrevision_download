@@ -1,8 +1,9 @@
 require 'grit'
 
 class GitrevisionDownloadController < ApplicationController
+  unloadable
 
-  before_filter :find_project
+  before_filter :find_project, :authorize, :only => [:index]
   #skip_before_filter :verify_authenticity_token, :check_if_login_required
 
   def index
@@ -10,6 +11,12 @@ class GitrevisionDownloadController < ApplicationController
     is_tag = false
     commit = nil
     return unless @project
+    # we check that the module is enabled
+    if not @project.module_enabled?('gitrevision_download')
+      render_404
+      return
+    end
+
     repository = @project.repository
     if repository.nil?
       flash.now[:error] = l(:project_no_repository, :name => @project.to_s)
