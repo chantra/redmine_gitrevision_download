@@ -1,7 +1,7 @@
 = Git Revision Download
 
 Redmine GitRevision Download is a Redmine plugin that adds a <b>download</b> link to
-the git repository browser, allowing users to download that snapshot.
+the git repository browser, allowing users to download a snapshot at a given revision.
 
 ==Author
 
@@ -13,7 +13,7 @@ For the complete changelog see the <tt>CHANGELOG</tt>-file in the Redmine GitRev
 
 ==Latest stable release
 
-The currently available, latest stable release of the plugin is version <b>0.0.1</b>.
+The currently available, latest stable release of the plugin is version <b>0.0.2</b>.
 
 ==Compatibility
 
@@ -38,6 +38,11 @@ The source of this plugin can be "cloned" from the GitHub-repo using:
 - Download the plugin from the available source http://github.com/chantra/redmine_gitrevision_download/downloads
 - Install the plugin as described at: http://www.redmine.org/wiki/redmine/Plugins (<b>this plugin does require a plugin database migration</b>)
 - Restart Redmine
+
+== Configuration
+
+- Go to http://myredmine.url/roles/report and change permission as see fit
+- Enable the module on a per project basis through Settings -> Module
 
 ==Uninstalling
 
