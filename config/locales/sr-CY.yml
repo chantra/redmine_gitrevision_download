@@ -1,5 +1,5 @@
 # English strings go here for Rails i18n
-sr-CY:
+"sr-CY":
   project_not_found: "The project you are looking for was not found."
   unknown_exception: "A system error occured, your request cannot be processed."
   project_no_repository: "Project {{name}} has no repository."
