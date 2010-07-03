@@ -9,3 +9,4 @@ de:
   not_such_commit: "Der Commit {{commit}} wurde nicht gefunden."
   gitrevision_download_revdownload: "Revision herunterladen: "
   permission_view_gitrevision_download: "Das Git Archiv herunterladen"
+  project_module_gitrevision_download: "Git Revision Download"

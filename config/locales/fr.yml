@@ -1,5 +1,5 @@
-# English strings go here for Rails i18n
-en:
+# French strings go here for Rails i18n
+fr:
   project_not_found: "Le projet que vous cherchez n'a pas été trouvé."
   unknown_exception: "Une erreur système est survenue, votre demande ne peux être traitée." 
   project_no_repository: "Le projet {{name}} n'a pas de dépôt." 
@@ -9,3 +9,4 @@ en:
   not_such_commit: "Le commit {{commit}} n'a pas été trouvé." 
   gitrevision_download_revdownload: "Télécharger la révision: "
   permission_view_gitrevision_download: "Téléchargement d'archive de révision Git" 
+  project_module_gitrevision_download: "Git Revision Download"

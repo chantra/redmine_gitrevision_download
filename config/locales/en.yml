@@ -9,3 +9,4 @@ en:
   not_such_commit: "Not such commit {{commit}}."
   gitrevision_download_revdownload: "Download revision: "
   permission_view_gitrevision_download: "Download Git Revision Archive"
+  project_module_gitrevision_download: "Git Revision Download"
