@@ -3,6 +3,11 @@
 Redmine GitRevision Download is a Redmine plugin that adds a <b>download</b> link to
 the git repository browser, allowing users to download a snapshot at a given revision.
 
+It is translated in:
+* English
+* French
+* German
+
 ==Author
 
 * Emmanuel Bretelle aka chantra <chantra_-_AT_-_debuntu_-_DOT_-_org>
@@ -13,7 +18,7 @@ For the complete changelog see the <tt>CHANGELOG</tt>-file in the Redmine GitRev
 
 ==Latest stable release
 
-The currently available, latest stable release of the plugin is version <b>0.0.2</b>.
+The currently available, latest stable release of the plugin is version <b>0.0.3</b>.
 
 ==Compatibility
 

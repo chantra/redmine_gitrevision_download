@@ -7,7 +7,7 @@ Redmine::Plugin.register :redmine_gitrevision_download do
   name 'Redmine Gitrevision Download plugin'
   author 'Emmanuel Bretelle'
   description 'A plugin adding a download link to git repository browser'
-  version '0.0.2'
+  version '0.0.3'
   # This plugin adds a project module
   # It can be enabled/disabled at project level (Project settings -> Modules)
   project_module :gitrevision_download do
