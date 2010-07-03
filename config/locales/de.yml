@@ -8,4 +8,4 @@ de:
   repo_not_git: "Das Projektarchiv von {{name}} ist kein Git Repository."
   not_such_commit: "Der Commit {{commit}} wurde nicht gefunden."
   gitrevision_download_revdownload: "Revision herunterladen: "
-  permission_view_gitrevision_download: "Das Git Archiv herunterladen."
+  permission_view_gitrevision_download: "Das Git Archiv herunterladen"
