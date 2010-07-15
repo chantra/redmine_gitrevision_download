@@ -30,9 +30,12 @@ This plugin depends on ruby gem <b>grit</b>
 You can install it with:
 <tt>gem install grit</tt>
 
+People running Redmine on windows will also need to install <b>win32-open3</b> :
+see http://redmine.debuntu.org/issues/3#note-1
+
 ==Obtaining 
 
-<i>URL of the GitHub repository: http://github.com/chantra//tree/master</i>
+<i>URL of the GitHub repository: http://github.com/chantra/redmine_gitrevision_download/tree/master</i>
 
 The source of this plugin can be "cloned" from the GitHub-repo using:
 
