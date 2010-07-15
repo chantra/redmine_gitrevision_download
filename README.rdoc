@@ -7,6 +7,9 @@ It is translated in:
 * English
 * French
 * German
+* Spanish
+* Catalan
+* Traditional/Simplified Chinese
 
 ==Author
 
@@ -18,7 +21,7 @@ For the complete changelog see the <tt>CHANGELOG</tt>-file in the Redmine GitRev
 
 ==Latest stable release
 
-The currently available, latest stable release of the plugin is version <b>0.0.3</b>.
+The currently available, latest stable release of the plugin is version <b>0.0.4</b>.
 
 ==Compatibility
 

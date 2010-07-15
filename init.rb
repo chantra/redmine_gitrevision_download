@@ -6,8 +6,10 @@ require_dependency 'gitrevision_download/hooks'
 Redmine::Plugin.register :redmine_gitrevision_download do
   name 'Redmine Gitrevision Download plugin'
   author 'Emmanuel Bretelle'
+  author_url 'http://www.debuntu.org'
+  url 'http://redmine.debuntu.org/projects/gitrevision-download'
   description 'A plugin adding a download link to git repository browser'
-  version '0.0.3'
+  version '0.0.4'
   # This plugin adds a project module
   # It can be enabled/disabled at project level (Project settings -> Modules)
   project_module :gitrevision_download do

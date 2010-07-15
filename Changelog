@@ -1,3 +1,10 @@
+0.0.4 (2010-07-15):
+New translations:
+	* Spanish/Catalan by Gerard Forns
+	* Simplified/Traditional Chinese by Simon Liu
+	* Update install doc for redmine on windows
+	* Added link to project homepage to init.rb
+
 0.0.3 (2010-07-03):
 New translations:
 	* German translation by hexa2k9 (Christian Boenning)
