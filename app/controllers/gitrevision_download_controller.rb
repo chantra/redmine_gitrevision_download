@@ -85,11 +85,15 @@ class GitrevisionDownloadController < ApplicationController
       return
     end
 
-   
-    content = repo.archive_tar_gz(commit.to_s, "#{@project.to_s}-#{rev}/")
-   
-    headers['Content-Disposition'] = "attachment; filename=#{@project.to_s}-#{rev}.tar.gz"
-    render(:content_type => 'application/x-gzip', :text => content)
+    is_unix = TRUE
+    if RUBY_PLATFORM.downcase =~ /mswin(?!ce)|mingw|bccwin/
+      is_unix = FALSE
+      content = repo.archive_tar(commit.to_s, "#{@project.to_s}-#{rev}/")
+    else
+      content = repo.archive_tar_gz(commit.to_s, "#{@project.to_s}-#{rev}/")
+    end
+    headers['Content-Disposition'] = "attachment; filename=#{@project.to_s}-#{rev}.tar" + (is_unix ? ".gz" : "")
+    render(:content_type => is_unix ? 'application/x-gzip' : 'application/x-tar', :text => content)
   end
 
   private
