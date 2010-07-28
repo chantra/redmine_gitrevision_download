@@ -21,7 +21,7 @@ For the complete changelog see the <tt>CHANGELOG</tt>-file in the Redmine GitRev
 
 ==Latest stable release
 
-The currently available, latest stable release of the plugin is version <b>0.0.4</b>.
+The currently available, latest stable release of the plugin is version <b>0.0.5</b>.
 
 ==Compatibility
 
@@ -47,13 +47,16 @@ The source of this plugin can be "cloned" from the GitHub-repo using:
 ==Installation
 
 - Download the plugin from the available source http://github.com/chantra/redmine_gitrevision_download/downloads
-- Install the plugin as described at: http://www.redmine.org/wiki/redmine/Plugins (<b>this plugin does require a plugin database migration</b>)
+- Install the plugin as described at: http://www.redmine.org/wiki/redmine/Plugins
 - Restart Redmine
 
 == Configuration
 
 - Go to http://myredmine.url/roles/report and change permission as see fit
 - Enable the module on a per project basis through Settings -> Module
+
+- Go to http://myredmine.url/admin/plugins and configure Gitrevision plugin
+- Change timeout (in seconds) and gzipping options to your needs
 
 ==Uninstalling
 
