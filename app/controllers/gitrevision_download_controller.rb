@@ -88,17 +88,19 @@ class GitrevisionDownloadController < ApplicationController
     is_gzipped = TRUE
     content = ""
     timeout = Setting.plugin_redmine_gitrevision_download[:timeout].to_f
+    max_size = Setting.plugin_redmine_gitrevision_download[:max_size].to_i
+    Grit::Git.git_timeout = timeout
+    Grit::Git.git_max_size = max_size
+
     begin
-      Grit::Git.with_timeout(timeout) do
-        if Setting.plugin_redmine_gitrevision_download[:gzip]
-          content = repo.archive_tar_gz(commit.to_s, "#{@project.to_s}-#{rev}/")
-        else
-          content = repo.archive_tar(commit.to_s, "#{@project.to_s}-#{rev}/")
-          is_gzipped = FALSE
-        end
+      if Setting.plugin_redmine_gitrevision_download[:gzip]
+        content = repo.archive_tar_gz(commit.to_s, "#{@project.to_s}-#{rev}/")
+      else
+        content = repo.archive_tar(commit.to_s, "#{@project.to_s}-#{rev}/")
+        is_gzipped = FALSE
       end
     rescue Grit::Git::GitTimeout => e
-      flash.now[:error] = l(:git_archive_timeout, :timeout => timeout)
+      flash.now[:error] = l(:git_archive_timeout, :timeout => timeout, :bytes_read => e.bytes_read)
       render_404
       return
     end

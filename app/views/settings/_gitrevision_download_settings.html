@@ -1,13 +1,18 @@
+<% require 'grit' %>
+<%
+timeout = Setting.plugin_redmine_gitrevision_download[:timeout] ? Setting.plugin_redmine_gitrevision_download[:timeout] : Grit::Git.git_timeout
+max_size = Setting.plugin_redmine_gitrevision_download[:max_size] ? Setting.plugin_redmine_gitrevision_download[:max_size] : Grit::Git.git_max_size
+gzip_checked = Setting.plugin_redmine_gitrevision_download[:gzip] ? true : false
+%>
 <p>
 <%= content_tag(:label, l(:git_command_timeout)) %>
-<%=  text_field_tag("settings[timeout]",Setting.plugin_redmine_gitrevision_download[:timeout]) %>
+<%=  text_field_tag("settings[timeout]",timeout) %>
+</p>
+<p>
+<%= content_tag(:label, l(:git_archive_max_size)) %>
+<%=  text_field_tag("settings[max_size]", max_size) %>
 </p>
 <p>
 <%= content_tag(:label, l(:git_archive_gzip)) %>
-<% checked = false
-if Setting.plugin_redmine_gitrevision_download[:gzip]
-  checked = true
-end
-%>
-<%=  check_box_tag "settings[gzip]", Setting.plugin_redmine_gitrevision_download[:gzip], checked %>
+<%=  check_box_tag "settings[gzip]", 1, gzip_checked %>
 </p>

@@ -11,7 +11,7 @@ Redmine::Plugin.register :redmine_gitrevision_download do
   description 'A plugin adding a download link to git repository browser'
   version '0.0.5'
 
-  settings :default => { :timeout => 10, :gzip => 1 }, :partial => 'settings/gitrevision_download_settings'
+  settings :default => { :gzip => 1 }, :partial => 'settings/gitrevision_download_settings'
   # This plugin adds a project module
   # It can be enabled/disabled at project level (Project settings -> Modules)
   project_module :gitrevision_download do
