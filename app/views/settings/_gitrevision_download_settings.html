@@ -1,0 +1,13 @@
+<p>
+<%= content_tag(:label, l(:git_command_timeout)) %>
+<%=  text_field_tag("settings[timeout]",Setting.plugin_redmine_gitrevision_download[:timeout]) %>
+</p>
+<p>
+<%= content_tag(:label, l(:git_archive_gzip)) %>
+<% checked = false
+if Setting.plugin_redmine_gitrevision_download[:gzip]
+  checked = true
+end
+%>
+<%=  check_box_tag "settings[gzip]", Setting.plugin_redmine_gitrevision_download[:gzip], checked %>
+</p>

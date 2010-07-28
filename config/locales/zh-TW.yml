@@ -10,3 +10,6 @@ zh-TW:
   gitrevision_download_revdownload: "下載版本: "
   permission_view_gitrevision_download: "下載指定 Git 版本的歸檔文件"
   project_module_gitrevision_download: "Git 脩訂下載"
+  git_archive_timeout: "Timeout after {{timeout}} seconds while archiving the repository."
+  git_archive_gzip: "Gzip"
+  git_command_timeout: "Archiving timeout"

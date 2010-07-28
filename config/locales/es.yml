@@ -10,3 +10,6 @@ es:
   gitrevision_download_revdownload: "Descargar la revisión: "
   permission_view_gitrevision_download: "Descargar el archivo de Revisión Git"
   project_module_gitrevision_download: "Descargar la Revisión Git"
+  git_archive_timeout: "Timeout after {{timeout}} seconds while archiving the repository."
+  git_archive_gzip: "Gzip"
+  git_command_timeout: "Archiving timeout"
