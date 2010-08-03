@@ -9,7 +9,7 @@ Redmine::Plugin.register :redmine_gitrevision_download do
   author_url 'http://www.debuntu.org'
   url 'http://redmine.debuntu.org/projects/gitrevision-download'
   description 'A plugin adding a download link to git repository browser'
-  version '0.0.5'
+  version '0.0.6'
 
   settings :default => { :gzip => 1 }, :partial => 'settings/gitrevision_download_settings'
   # This plugin adds a project module

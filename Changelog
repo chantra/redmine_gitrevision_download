@@ -1,3 +1,8 @@
+0.0.6 (2010-08-03):
+Features:
+	* Max size of git archive can be modified
+	* timeout value use default returned by Grit
+
 0.0.5 (2010-07-28):
 Features:
 	* plugin setting page
