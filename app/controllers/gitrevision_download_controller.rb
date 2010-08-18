@@ -103,7 +103,7 @@ class GitrevisionDownloadController < ApplicationController
       render_404
       return
     end
-    headers['Content-Disposition'] = "attachment; filename=#{@project.to_s}-#{rev}.tar" + (is_gzipped ? ".gz" : "")
+    headers['Content-Disposition'] = "attachment; filename=\"#{@project.to_s}-#{rev}.tar" + (is_gzipped ? ".gz" : "") + "\""
     render(:content_type => is_gzipped ? 'application/x-gzip' : 'application/x-tar', :text => content)
   end
 
