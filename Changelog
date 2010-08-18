@@ -2,6 +2,16 @@
 New Translation:
 	* Dutch by mthmulders
 
+Bugs:
+	* Properly format filename when project name contain space
+
+Features:
+	* Intent to Gzip with ActiveSupport::Gzip
+		if possible, then fallback to Grit gzip
+		if ActiveSupport::Gzip not available
+	* Use ActionController::Streaming to send Git Archive to browser
+		should work on more platform
+
 0.0.6 (2010-08-03):
 Features:
 	* Max size of git archive can be modified
