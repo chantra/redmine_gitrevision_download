@@ -92,30 +92,15 @@ class GitrevisionDownloadController < ApplicationController
     Grit::Git.git_timeout = timeout
     Grit::Git.git_max_size = max_size
 
-    # check if we can use ActiveSupport::Gzip
-    has_activesupport_gzip = true
     begin
-      ActiveSupport.const_get('Gzip')
-    rescue NameError
-      has_activesupport_gzip = false
-    end
-
-    begin
-      # if we dont have ActiveSupport::Gzip
-      # and we need to zip archive
-      # => let Grit Gzip (using command line gzip)
-      if is_gzipped and not has_activesupport_gzip
-        content = repo.archive_tar_gz(commit.to_s, "#{@project.to_s}-#{rev}/")
-      else
-        content = repo.archive_tar(commit.to_s, "#{@project.to_s}-#{rev}/")
-      end
+      content = repo.archive_tar(commit.to_s, "#{@project.to_s}-#{rev}/")
     rescue Grit::Git::GitTimeout => e
       flash.now[:error] = l(:git_archive_timeout, :timeout => timeout, :bytes_read => e.bytes_read)
       render_404
       return
     end
     # Gzip content
-    if is_gzipped and has_activesupport_gzip
+    if is_gzipped
         content = ActiveSupport::Gzip.compress(content)
     end
 
