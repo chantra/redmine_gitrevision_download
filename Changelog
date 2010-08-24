@@ -1,4 +1,4 @@
-0.0.7 (undefined):
+0.0.7 (2010-08-24):
 New Translation:
 	* Dutch by mthmulders
 
@@ -6,9 +6,9 @@ Bugs:
 	* Properly format filename when project name contain space
 
 Features:
-	* Intent to Gzip with ActiveSupport::Gzip
-		if possible, then fallback to Grit gzip
-		if ActiveSupport::Gzip not available
+	* Gzip with ActiveSupport::Gzip instead of Grit's gzip
+		Grit would use gzip from command line which might not work
+		on all platform
 	* Use ActionController::Streaming to send Git Archive to browser
 		should work on more platform
 
