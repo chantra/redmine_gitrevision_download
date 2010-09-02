@@ -85,11 +85,26 @@ class GitrevisionDownloadController < ApplicationController
       return
     end
 
-   
-    content = repo.archive_tar_gz(commit.to_s, "#{@project.to_s}-#{rev}/")
-   
-    headers['Content-Disposition'] = "attachment; filename=#{@project.to_s}-#{rev}.tar.gz"
-    render(:content_type => 'application/x-gzip', :text => content)
+    is_gzipped = Setting.plugin_redmine_gitrevision_download[:gzip] ? true : false
+    content = ""
+    timeout = Setting.plugin_redmine_gitrevision_download[:timeout].to_f
+    max_size = Setting.plugin_redmine_gitrevision_download[:max_size].to_i
+    Grit::Git.git_timeout = timeout
+    Grit::Git.git_max_size = max_size
+
+    begin
+      content = repo.archive_tar(commit.to_s, "#{@project.to_s}-#{rev}/")
+    rescue Grit::Git::GitTimeout => e
+      flash.now[:error] = l(:git_archive_timeout, :timeout => timeout, :bytes_read => e.bytes_read)
+      render_404
+      return
+    end
+    # Gzip content
+    if is_gzipped
+        content = ActiveSupport::Gzip.compress(content)
+    end
+
+    send_data(content, :filename => "#{@project.to_s}-#{rev}.tar" + (is_gzipped ? ".gz" : ""), :type => is_gzipped ? 'application/x-gzip' : 'application/x-tar')
   end
 
   private

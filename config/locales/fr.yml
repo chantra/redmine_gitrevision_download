@@ -10,3 +10,7 @@ fr:
   gitrevision_download_revdownload: "Télécharger la révision: "
   permission_view_gitrevision_download: "Téléchargement d'archive de révision Git" 
   project_module_gitrevision_download: "Téléchargement de révision Git"
+  git_archive_timeout: "Timeout après {{timeout}} secondes, {{bytes_read}} byte pendant l'archivage du dépôt."
+  git_archive_gzip: "Gzip"
+  git_command_timeout: "Timeout d'archivage en seconds"
+  git_archive_max_size: "Taille maximale de l'archive git, en bytes"

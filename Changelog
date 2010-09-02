@@ -1,3 +1,35 @@
+0.0.7 (2010-08-24):
+New Translation:
+	* Dutch by mthmulders
+
+Bugs:
+	* Properly format filename when project name contain space
+
+Features:
+	* Gzip with ActiveSupport::Gzip instead of Grit's gzip
+		Grit would use gzip from command line which might not work
+		on all platform
+	* Use ActionController::Streaming to send Git Archive to browser
+		should work on more platform
+
+0.0.6 (2010-08-03):
+Features:
+	* Max size of git archive can be modified
+	* timeout value use default returned by Grit
+
+0.0.5 (2010-07-28):
+Features:
+	* plugin setting page
+		* change timeout value (fix #4)
+		* enable/disable gzip (fix #3)
+
+0.0.4 (2010-07-15):
+New translations:
+	* Spanish/Catalan by Gerard Forns
+	* Simplified/Traditional Chinese by Simon Liu
+	* Update install doc for redmine on windows
+	* Added link to project homepage to init.rb
+
 0.0.3 (2010-07-03):
 New translations:
 	* German translation by hexa2k9 (Christian Boenning)
