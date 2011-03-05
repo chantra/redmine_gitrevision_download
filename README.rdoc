@@ -10,6 +10,8 @@ It is translated in:
 * Spanish
 * Catalan
 * Traditional/Simplified Chinese
+* Russian
+* Dutch
 
 ==Author
 
