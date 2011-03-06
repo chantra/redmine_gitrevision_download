@@ -91,9 +91,12 @@ class GitrevisionDownloadController < ApplicationController
     max_size = Setting.plugin_redmine_gitrevision_download[:max_size].to_i
     Grit::Git.git_timeout = timeout
     Grit::Git.git_max_size = max_size
-
+    project_name = @project.to_s.parameterize.to_s
+    if project_name.length == 0:
+      project_name = "tarball"
+    end
     begin
-      content = repo.archive_tar(commit.to_s, "#{@project.to_s}-#{rev}/")
+      content = repo.archive_tar(commit.to_s, "#{project_name}-#{rev}/")
     rescue Grit::Git::GitTimeout => e
       flash.now[:error] = l(:git_archive_timeout, :timeout => timeout, :bytes_read => e.bytes_read)
       render_404
@@ -104,7 +107,7 @@ class GitrevisionDownloadController < ApplicationController
         content = ActiveSupport::Gzip.compress(content)
     end
 
-    send_data(content, :filename => "#{@project.to_s}-#{rev}.tar" + (is_gzipped ? ".gz" : ""), :type => is_gzipped ? 'application/x-gzip' : 'application/x-tar')
+    send_data(content, :filename => "#{project_name}-#{rev}.tar" + (is_gzipped ? ".gz" : ""), :type => is_gzipped ? 'application/x-gzip' : 'application/x-tar')
   end
 
   private
