@@ -12,6 +12,7 @@ It is translated in:
 * Traditional/Simplified Chinese
 * Russian
 * Dutch
+* Italian
 
 ==Author
 
@@ -27,7 +28,7 @@ The currently available, latest stable release of the plugin is version <b>0.0.7
 
 ==Compatibility
 
-This plugin is compatible with Redmine 0.9.x as well as with the current Redmine trunk.
+This plugin is compatible with Redmine 0.9.x, 1.0.X, 1.1.X and 1.2.X as well as with the current Redmine trunk.
 
 ==Requirement
 
@@ -52,6 +53,8 @@ The source of this plugin can be "cloned" from the GitHub-repo using:
 - Install the plugin as described at: http://www.redmine.org/wiki/redmine/Plugins
   in a nutshell run:
   <tt>rake db:migrate_plugins RAILS_ENV=production</tt>
+- If running redmine 0.9.X, you might need to change the symlink of app/views/repositories/revision.rhtml
+  from app/views/repositories/revision.rhtml.redmine-1.2 to app/views/repositories/revision.rhtml.redmine-0.9
 - Restart Redmine
 
 == Configuration
