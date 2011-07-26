@@ -20,11 +20,11 @@ It is translated in:
 
 ==Changelog
 
-For the complete changelog see the <tt>CHANGELOG</tt>-file in the Redmine GitRevision Download
+For the complete changelog see the <tt>Changelog</tt>-file in the Redmine GitRevision Download
 
 ==Latest stable release
 
-The currently available, latest stable release of the plugin is version <b>0.0.7</b>.
+The currently available, latest stable release of the plugin is version <b>0.0.8</b>.
 
 ==Compatibility
 
