@@ -1,6 +1,10 @@
-0.0.8 (2011-06-27):
-New Translation:
-	* Russian by hacenator
+0.0.8 (2011-07-26):
+Translation:
+	* Added Russian by hacenator
+	* Added Italian by gionn (Giovanni gionn Toraldo)
+
+Fixes:
+	* Fix non ascii characters in archive name (#16)
 
 Templates:
 	* Added revision.rhtml for redmine version 0.9.X and 1.2.X
