@@ -1,7 +1,5 @@
-require 'redmine'
-
 # It requires the file in lib/gitrevision_download/hooks.rb
-require_dependency 'gitrevision_download/hooks'
+require_dependency 'gitrevision_download/gitrevision_download_hook_listener'
 
 Redmine::Plugin.register :redmine_gitrevision_download do
   name 'Redmine Gitrevision Download plugin'
